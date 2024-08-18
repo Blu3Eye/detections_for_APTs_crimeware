@@ -9,9 +9,9 @@ rule crime_detect_ssload
 		type = "crimeware"
 		hash1 = "E01DDD72BC81781FE86A68D3AD045548"
 	strings:
-	    $a1 = "/rustc/25ef9e3d85d934b27d9dada2f9dd52b1dc63bb04"
-		$a2 = "AppData\\Local\\Temp\\tuHyNfOFXGWmy\\GsDSspC\\common\\src\\"
-		$a3 = "POST*/*HTTP/1.1Content-Type: application/json"
+	    $a1 = "/rustc/25ef9e3d85d934b27d9dada2f9dd52b1dc63bb04" ascii 
+		$a2 = "AppData\\Local\\Temp\\tuHyNfOFXGWmy\\GsDSspC\\common\\src\\" ascii 
+		$a3 = "POST*/*HTTP/1.1Content-Type: application/json" ascii 
 		$hash_resolver = {BF 61 31 0A 00 8A 14 2B ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 88 D6 80 C6 E0 80 FA 61 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? C1 E0 05 ?? ?? ?? ?? ?? 01 C7}
 	    
 	condition:
