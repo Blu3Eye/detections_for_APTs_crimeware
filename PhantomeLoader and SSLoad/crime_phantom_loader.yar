@@ -16,6 +16,6 @@ rule crime_phantom_loader_dll
 	condition:
 	    (uint16(0) == 0x5A4D)
 		and $buffer_size and 
-		$enc_code_size
-		and $pdp_str
+		$enc_code_size and 
+	    $pdb_str
 }
