@@ -8,7 +8,7 @@ rule crime_phantom_loader_dll
 		hash1 = "BD3231011448B2D6A335032D11C12CAD"
 		hash2 = "CA303668B5420C022EF9C78CE1F2BFB7"
 	strings:
-		$a1 = "C:\\vmagent_new\\bin\\joblist" ascii  
+		$pdb_str = "C:\\vmagent_new\\bin\\joblist" ascii  
 		//size of the buffer used to calculate the key index 
 		$buffer_size = {00 E1 F5 05}
 		$enc_code_size = {D0 07} 
@@ -17,5 +17,5 @@ rule crime_phantom_loader_dll
 	    (uint16(0) == 0x5A4D)
 		and $buffer_size and 
 		$enc_code_size
-		and (any of ($a*))
+		and $pdp_str
 }
