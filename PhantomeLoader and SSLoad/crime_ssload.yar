@@ -8,6 +8,7 @@ rule crime_detect_ssload
 		date = "2024-18-8"
 		type = "crimeware"
 		hash1 = "E01DDD72BC81781FE86A68D3AD045548"
+		hash2 = "D98749205FFF0909E335B5EEB1378973"
 	strings:
 	    $a1 = "/rustc/25ef9e3d85d934b27d9dada2f9dd52b1dc63bb04" ascii 
 		$a2 = "AppData\\Local\\Temp\\tuHyNfOFXGWmy\\GsDSspC\\common\\src\\" ascii 
@@ -16,8 +17,7 @@ rule crime_detect_ssload
 	    
 	condition:
 	    (uint16(0) == 0x5A4D and 
-		filesize < 500KB or
-		pe.imphash() == "27CFE5237AF2563D5CF9261F92875077" and
+		filesize < 500KB and
 		$hash_resolver and 
 		any of ($a*)
 		)
