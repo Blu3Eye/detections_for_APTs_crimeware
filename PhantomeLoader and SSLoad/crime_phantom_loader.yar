@@ -6,6 +6,7 @@ rule crime_phantom_loader_dll
 		date = "2024-17-8"
 		type = "crimeware"
 		hash1 = "BD3231011448B2D6A335032D11C12CAD"
+		hash2 = "CA303668B5420C022EF9C78CE1F2BFB7"
 	strings:
 		$a1 = "C:\\vmagent_new\\bin\\joblist" ascii  
 		//size of the buffer used to calculate the key index 
