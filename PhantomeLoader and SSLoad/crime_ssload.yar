@@ -1,5 +1,3 @@
-import "pe"
-
 rule crime_detect_ssload
 {
     meta:
