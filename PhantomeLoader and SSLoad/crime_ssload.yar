@@ -2,7 +2,7 @@ rule crime_detect_ssload
 {
     meta:
 	    description = "Detects ssload (rust-based loader)"
-		author = "Mohamed Talaat"
+		author = "Mohamed Talaat and ANY.RUN MA team"
 		date = "2024-18-8"
 		type = "crimeware"
 		hash1 = "E01DDD72BC81781FE86A68D3AD045548"
